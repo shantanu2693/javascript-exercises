@@ -1,13 +1,21 @@
-/*
- First name: Carlos
- Last name: Stevenson
- This year: 1965
- Birth year: 1947
+//First name: Carlos
+//Last name: Stevenson
+//This year: 1965
+//Birth year: 1947
 
- The greeting should read: "Hello! My name is Carlos Stevenson and I am 18 years old."
-*/
+//The greeting should read: "Hello! My name is Carlos Stevenson and I am 18 years old."
 
 // Add your code right below, good luck!
+
+firstName = 'Carlos';
+lastName = 'Stevenson';
+thisYear = 1965;
+birthYear = 1947;
+
+greeting = `Hello! My name is ${firstName} ${lastName} and I am ${thisYear - birthYear} years old.`;
+
+fullName = `${firstName} ${lastName}`;
+age = thisYear - birthYear;
 
 
 
