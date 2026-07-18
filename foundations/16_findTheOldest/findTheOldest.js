@@ -1,10 +1,17 @@
 const findTheOldest = function(people) {
-    return people.reduce((obj,value) => {
-        if ((obj.yearOfDeath - obj.yearOfBirth) >= (value.yearOfDeath - value.yearOfBirth)){
-            obj.name = value.name
+    let minimumAge = 0;
+    let obj = {};
+    for (pplObject of people){
+        if (pplObject.yearOfDeath == undefined){
+            pplObject.yearOfDeath = new Date().getFullYear();
         }
-        return obj.name;
-    },{name: "Shantanu",yearOfBirth:2000,yearOfDeath:2000})
+        age = pplObject.yearOfDeath - pplObject.yearOfBirth
+        if (age > minimumAge){
+            minimumAge = age;
+            obj = pplObject;
+        }
+    }
+    return obj;
 };
 
 // Do not edit below this line
